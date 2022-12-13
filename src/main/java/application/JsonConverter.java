@@ -79,8 +79,9 @@ public class JsonConverter {
         return json;
     }
 
-    public static String makeJsonReview(int id, String review, User user){
-        return  "{\n\t\"id\": " + id + ",\n\t\"review\": " + review + "\n\t\"login\": "
-                + user.getLogin() + ",\n\t\"pass\": " + user.getPass() + "\n}";
+    public static String makeJsonReview(int id, String review, int grade, User user){
+        return  "{\n\t\"recipe_id\": " + id + ",\n\t\"content\": " + review + ",\n\t\"login\": "
+                + user.getLogin() + ",\n\t\"pass\": " + user.getPass() +
+                ",\n\t\"grade\": " + grade +"\n}";
     }
 }

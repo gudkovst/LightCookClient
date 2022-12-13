@@ -3,14 +3,13 @@ package application;
 import dto.Standard;
 
 public class User {
-    private final Requester requester;
+
     private String login;
     private String pass;
     private String[] standardTools;
     private String[] standardIngredients;
 
-    public User(Requester req){
-        requester = req;
+    public User(){
         login = null;
         pass = null;
     }
@@ -23,10 +22,6 @@ public class User {
 
     public boolean isAuth(){
         return login != null && pass != null;
-    }
-
-    public Requester getRequester() {
-        return requester;
     }
 
     public void setStandard(Standard standard){
